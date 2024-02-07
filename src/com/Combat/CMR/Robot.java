@@ -11,7 +11,7 @@ public class Robot {
     public Robot(String nom) {
         this.nom = nom;
     }
-
+ 
     public void setNom(String nom) {
         this.nom = nom;
     }
@@ -28,6 +28,7 @@ public class Robot {
         return nbreVies;
     }
     //************* methode fight qui permet a un rob de tirer ************************///
+    
     public void fire (Robot rob) {
         System.out.println("le robot " + this.getNom() + "va tirer");
         rob.setNbreVies(this.getNbreVies() - 2);

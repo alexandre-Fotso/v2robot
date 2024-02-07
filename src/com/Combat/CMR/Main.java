@@ -3,7 +3,7 @@ package com.Combat.CMR;
 
 public class Main {
     public static void main(String[] args) {
-        //*******creation of the first robot called bob1 ************//
+        //*******creation of the first robot called bob ************//
         Robot rob1 = new Robot("bob1");
             System.out.println("bonjour " +  rob1.getNom());
         //*******creation of the second robot called bob2 ************//
