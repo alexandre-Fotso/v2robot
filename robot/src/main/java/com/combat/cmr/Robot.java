@@ -7,10 +7,11 @@ public class Robot {
   
 
    private String nom;
-   private int nbreVies = 10;
+   private int nbreVies;
 
    public Robot(String nom) {
       this.nom = nom;
+      this.nbreVies = 10;
    }
 
    public void setNom(String nom) {
@@ -22,28 +23,43 @@ public class Robot {
    }
 
    public String getNom() {
-      return " Robot " + this.nom;
+      return   this.nom;
    }
 
    public int getNbreVies() {
       return this.nbreVies;
    }
 
-   public void fire(Robot rob) {
+   public String fire (Robot rob) {
+     if ( rob.isDead() == true) {
+         return "le robot " + rob.getNom() + "mort";
+
+     }else {
       System.out.println("le robot " + this.getNom() + "va tirer");
       rob.setNbreVies(this.getNbreVies() - 2);
       PrintStream var10000 = System.out;
       String var10001 = rob.getNom();
-      var10000.println("le robot " + var10001 + "a ete touche pas le robot " + this.getNom() + "bar !!");
+       return"le robot " + var10001 + "a ete touche pas le robot " + this.getNom() + "bar !!";
+
+     }
+      
    }
 
-   public void isDead() {
-      if (this.nbreVies < 0) {
-         System.out.println("il est mort");
+   public boolean isDead() {
+      if (this.nbreVies == 0) {
+        System.out.println("le robot  " + this.nom +  "mort");
+         return true;
+
       } else {
-         System.out.println("il n'est pas mort");
+         System.out.println("le robot " + this.nom + "nest pas mort mort");
+         return false;
+
       }
 
+   }
+
+   public String  toString() {
+      return "je suis un Robot appele" + this.getNom() + "avec pour nbre de vie " + this.getNbreVies() ;
    }
 }
 

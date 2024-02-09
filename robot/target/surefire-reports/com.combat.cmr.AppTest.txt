@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: com.combat.cmr.AppTest
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.027 s <<< FAILURE! - in com.combat.cmr.AppTest
+testToString(com.combat.cmr.AppTest)  Time elapsed: 0.004 s  <<< FAILURE!
+org.junit.ComparisonFailure: expected:<[fjgfk]> but was:<[J'ai herite de la class robot et je simule le combat entre humain et robot le nom the humain est  Robot fotso]>
+	at com.combat.cmr.AppTest.testToString(AppTest.java:39)
+
