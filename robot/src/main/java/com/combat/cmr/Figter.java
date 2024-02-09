@@ -2,9 +2,14 @@ package com.combat.cmr;
 import java.util.Random;
 
 public class Figter extends Robot{
+   // private int seed ;
+
     
-    public Figter(String nom) {
-        super(nom);
+    public Figter(String nom ) {
+       
+        super(nom); 
+        //this.seed = randomNumberSeed ;
+       
         //TODO Auto-generated constructor stub
     }
 
@@ -15,8 +20,8 @@ public class Figter extends Robot{
        
             while (fotso.getNbreVies() > 0 && rob.getNbreVies() >0 ) {
               //  System.out.println("Humain " + fotso.getNom() + "va tire");
-                boolean randomNumber = objGenerator.nextBoolean();
-                        if (randomNumber == true ) {
+                boolean randomBoolean = objGenerator.nextBoolean();
+                        if (randomBoolean == false ) {
                             System.out.println("l'humain " + rob.getNom() + "a ete touche");
                             fotso.fire(rob);
                             if (rob.getNbreVies() == 0) {
@@ -35,5 +40,8 @@ public class Figter extends Robot{
             }
         
     }
+    public String  toString() {
+        return "J'ai herite de la class robot et je simule le combat entre humain et robot le nom the humain est " + this.getNom() ;
+     }
     
 }
